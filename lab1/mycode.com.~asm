@@ -1,0 +1,29 @@
+
+; You may customize this and other start-up templates;
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+.MODEL SMALL
+.CODE
+MOV AX, 2000
+MOV BX, 2000H
+MOV CX, 1010001B
+MOV DX, 4567
+MOV BH,'A'
+MOV CL,'a'
+MOV AH, 4CH
+INT 21H ; INT 21h returns the control to DOS if AH=4CH
+END
+
+
+ret
+
+
+
+
+
+
+
+
+; [SOURCE]: D:\Semester 5\Micro Controllers\codes\lab1\mycode.asm
