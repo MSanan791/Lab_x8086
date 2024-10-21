@@ -1,0 +1,30 @@
+org 100h
+.DATA
+A DW 10
+B DW 20
+C DW 30
+
+.CODE 
+MOV AX, A
+MUL AX
+
+MOV BX,AX
+MOV AX, B
+MUL AX
+ADD BX,AX 
+
+MOV AX, C
+MUL AX
+
+CMP AX,BX
+JE Set
+CLC
+
+JMP End_
+Set:
+STC 
+
+End_:
+
+
+ret
