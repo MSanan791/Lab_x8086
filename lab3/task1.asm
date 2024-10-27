@@ -19,8 +19,7 @@ int 21h
 
 MOV AH, 0AH
 MOV DX, OFFSET BUFFER
-INT 21H
-Read from keyboard the word “hello”
+INT 21H ;Read from keyboard the word “hello”
   
 
 ret
