@@ -1,0 +1,20 @@
+org 100h
+.MODEL SMALL
+.STACK 100H
+
+.DATA
+
+
+.CODE
+MOV AX, @DATA
+MOV DX,AX
+
+MOV AL, FFFFh
+SHL AL, 4
+
+
+
+MOV AH, 4CH
+INT 21H
+
+ret
